@@ -10,6 +10,7 @@ import { BotId } from '../../bots'
 import Button from '../Button'
 import HistoryDialog from '../History/Dialog'
 import SwitchBotDropdown from '../SwitchBotDropdown'
+import ChatGPTModelToggle from './ChatGPTModelToggle'
 import ChatMessageInput from './ChatMessageInput'
 import ChatMessageList from './ChatMessageList'
 
@@ -73,6 +74,7 @@ const ConversationPanel: FC<Props> = (props) => {
             <span className="font-semibold text-[#707070] text-sm">{botInfo.name}</span>
             {mode === 'compact' && <SwitchBotDropdown excludeBotId={props.botId} index={props.index!} />}
           </div>
+          {props.botId === 'chatgpt' && <ChatGPTModelToggle />}
           <div className="flex flex-row items-center gap-3">
             <img
               src={clearIcon}
