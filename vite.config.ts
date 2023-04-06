@@ -12,4 +12,7 @@ export default defineConfig({
       input: ['app.html'],
     },
   },
+  server: {
+    host: true
+  }
 })
